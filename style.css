@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  padding: 120px;
+  width: 1200px;
+  height: 3000px;
+}
+
+.favorite-projects .project-title {
+  padding-bottom: 30px;
+}
+.favorite-projects .project-title h1 {
+  font-size: 40px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  margin: 0 0 15px;
+  font-weight: 800;
+}
+.favorite-projects .projects {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 26px;
+}
+.favorite-projects .projects .item {
+  cursor: pointer;
+  position: relative;
+  width: 24%;
+}
+.favorite-projects .projects .item:hover .content .date {
+  opacity: 1;
+  transform: translateY(20px);
+}
+.favorite-projects .projects .item:hover .content {
+  background-color: rgba(0, 0, 0, 0.397);
+}
+.favorite-projects .projects .item:hover .content .down {
+  opacity: 1;
+  transform: translateY(-18px);
+}
+.favorite-projects .projects .item img {
+  max-width: 100%;
+  height: 100%;
+}
+.favorite-projects .projects .item .content {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  transition: 0.5s;
+}
+.favorite-projects .projects .item .content .date {
+  position: absolute;
+  left: 20px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.5s;
+}
+.favorite-projects .projects .item .content .date span {
+  color: white;
+}
+.favorite-projects .projects .item .content .down {
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  display: flex;
+  width: 190px;
+  justify-content: space-between;
+  transform: translateY(-10px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.favorite-projects .projects .item .content .down .office {
+  display: block;
+  position: absolute;
+  color: rgb(211, 15, 15);
+  bottom: 30px;
+  font-size: 12px;
+  visibility: hidden;
+  transition: 0.5s;
+  opacity: 0;
+}
+.favorite-projects .projects .item .content .down .title {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transition: 0.5s;
+}
+.favorite-projects .projects .item .content .down .title:hover {
+  color: red;
+}
+.favorite-projects .projects .item .content .down .link {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+}
+.favorite-projects .view-all {
+  display: inline-block;
+  margin-top: 60px;
+  position: absolute;
+  right: 48%;
+  font-size: 12px;
+  text-align: center;
+  color: white;
+  width: 120px;
+  height: 50px;
+  padding: 18px;
+  font-weight: 900;
+  background-color: red;
+  cursor: pointer;
+}
+.favorite-projects .view-all a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
