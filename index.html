@@ -4,112 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marif</title>
-    <link rel="stylesheet" href="/bootstrap-5.2.2/bootstrap.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="/bootstrap-5.2.2/bootstrap-5.2.2/dist/css/bootstrap.css">
     <link rel="stylesheet" href="/style.css">
-    <style>
-        body{
-    background-color: rgba(248, 244, 237, 0.952);
-}
-
-.decrease, .enlarge{
-    width: 40px;
-    background-color: inherit;
-    border: none;
-    font-weight: bold;
-}
-
-.button{
-    width: 10%;
-}
-#fname{
-    background-color: inherit;
-}
-
-.city{
-    margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.delete-icon{
-    background-color: rgb(153, 102, 102);
-    color: white;
-    height: 24px;
-    font-size: 12px;
-}
-    </style>
 </head>
 <body>
     <div class="container">
         <div class="row">
-          <button class="enlarge d-flex mt-3">A+</button>
-          <button class="decrease d-flex mt-3">A-</button>
+          <button class="enlarge d-flex mt-3">Böyüt</button>
+          <button class="decrease d-flex mt-3">Kiçilt</button>
           <p class="lorem" style="font-size: 20px">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis numquam saepe illo rerum aspernatur reprehenderit, optio voluptatem obcaecati dolorem voluptatum laudantium explicabo neque tenetur at, eaque accusamus deserunt voluptatibus amet.</p>
+          
           <div class="form">
-            <label for="fname">Şəhər adi</label><br>
+            <label class='form-label' for="fname">Şəhər adi</label><br>
             <input type="text" id="fname" name="fname">
             <button class="submit">Əlavə et</button>
-          </div>       
-
+          </div>
+          <ul class="ul">
+          </ul>
         </div>
     </div>
-    <script src="/main.js">let enlarge = document.querySelector('.enlarge');
-let decrease = document.querySelector('.decrease');
-let lorem = document.querySelector('.lorem');
-
-let currentFontSize = parseInt(lorem.style.fontSize);
-
-enlarge.addEventListener('click', function () {
-    currentFontSize++;
-    lorem.style.fontSize = currentFontSize + "px";
-});
-
-decrease.addEventListener('click', function () {
-    currentFontSize--;
-    lorem.style.fontSize = currentFontSize + "px";
-});
-
-let addCity = document.querySelector('.submit')
-let form = document.querySelector('.form');
-let row = document.querySelector('.row');
-
-addCity.addEventListener('click', function () {
-    
-    let li = document.createElement('li');
-    let text = document.getElementById('fname');
-    let title = text.value;
-    li.innerText = title;
-    li.classList.add('d-flex','w-75','city')
-    
-    if(title != ''){
-        row.appendChild(li);
-    }
-    else{
-        console.log('Seher adi daxil edin');
-        return;
-    }  
-    
-    let icon = document.createElement('button');
-    icon.innerText = 'Delete';
-    icon.classList.add('delete-icon');
-    li.appendChild(icon);
-    
-
-    let deleteBtn = document.querySelector('.delete-icon');
-    deleteBtn.addEventListener('click', function(){
-        this.parentNode.remove();
-        
-    })
-    if(title != ''){
-        row.append(li);
-        li.append(icon);
-
-    }
-    else{
-        console.log('Seher adi daxil edin');
-        return;
-    }  
-});</script>
+    <script src="/main.js"></script>
 </body>
 </html>
