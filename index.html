@@ -10958,21 +10958,28 @@ textarea.form-control-lg {
     
 </head>
 <body>
-    <div class="container">
-        <div class="row">
-          <button class="enlarge d-flex mt-3">Böyüt</button>
-          <button class="decrease d-flex mt-3">Kiçilt</button>
-          <p class="lorem" style="font-size: 20px">Şəhər adı əlavə etdikdən sonra fokus formun üstündə olsun. Əlavə et düyməsinə basdıqdan sonra kursoru forma klikləmədən yenidən dərhal şəhər adı qed edib əlavə etmək olsun</p>
-          
-          <div class="form">
-            <label class='form-label' for="fname">Şəhər adi</label><br>
-            <input type="text" id="fname" name="fname">
-            <button class="submit">Əlavə et</button>
-          </div>
-          <ul class="ul">
-          </ul>
+    <body>
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <div class="buttons">
+          <button class="enlarge mt-3">Böyüt</button>
+          <button class="decrease mt-3">Kiçilt</button>
         </div>
+        <p class="lorem" style="font-size: 20px">Şəhər adı əlavə etdikdən sonra fokus formun üstündə olsun. Əlavə et
+          düyməsinə basdıqdan sonra kursoru forma klikləmədən yenidən dərhal şəhər adı qed edib əlavə etmək olsun.</p>
+
+        <div class="form">
+          <label class='form-label' for="fname">Şəhər adi</label><br>
+          <input type="text" id="fname" name="fname">
+          <button class="submit">Əlavə et</button>
+        </div>
+        <ul class="ul">
+        </ul>
+      </div>
+
     </div>
+  </div>
 
     <script>
         let enlarge = document.querySelector('.enlarge');
