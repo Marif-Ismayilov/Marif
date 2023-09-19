@@ -20,31 +20,31 @@ let row = document.querySelector('.row');
 let ul = document.querySelector('.ul');             // her ehtimala qarsi 4 eded queryselector
 
 addCity.addEventListener('click', function () {
-    
-    let li = document.createElement('li');          
-    let text = document.getElementById('fname');   
-    let title = text.value;                         
-    li.innerText = title;                           
-    li.classList.add('d-flex','w-75','city','list-group-item') 
+
+    let li = document.createElement('li');
+    let text = document.getElementById('fname');
+    let title = text.value;
+    li.innerText = title;
+    li.classList.add('d-flex','w-75','city','list-group-item')
     text.value = ('');
-           
+
 
     let deleteBtn = document.createElement('button');    // her li ucun delete buttonu yaratdim
-    deleteBtn.classList.add('delete-icon');   
+    deleteBtn.classList.add('delete-icon');
     deleteBtn.innerText = 'Delete';
-    deleteBtn.addEventListener('click', function(){ 
-        this.parentNode.remove();           
-    }); 
+    deleteBtn.addEventListener('click', function(){
+        this.parentNode.remove();
+    });
 
-    if(!title){      
+    if(!title){
         alert('Seher adi daxil edin');
-        return;                
-        
+        return;
+
     }
     else{
         ul.append(li);
         li.append(deleteBtn);
     }
-    
+
 });
 
