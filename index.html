@@ -12570,13 +12570,13 @@
     decrease.addEventListener('click', function () {
         currentFontSize--;
         lorem.style.fontSize = currentFontSize + "px";
-    });                                                 // 17-ci setre kimi fikir verme
-
+    });
+    
     let addCity = document.querySelector('.submit')
     let form = document.querySelector('.form');
     let row = document.querySelector('.row');
-    let ul = document.querySelector('.ul');             // her ehtimala qarsi 4 eded queryselector
-
+    let ul = document.querySelector('.ul');
+    
     addCity.addEventListener('click', function () {
 
         let li = document.createElement('li');
@@ -12587,7 +12587,7 @@
         text.value = ('');
 
 
-        let deleteBtn = document.createElement('button');    // her li ucun delete buttonu yaratdim
+        let deleteBtn = document.createElement('button');
         deleteBtn.classList.add('delete-icon');
         deleteBtn.innerText = 'Delete';
         deleteBtn.addEventListener('click', function () {
